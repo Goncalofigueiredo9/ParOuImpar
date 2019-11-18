@@ -21,8 +21,13 @@ namespace ParOuImpar
         {
             get
             {
-                if (valor % 2 == 0) return "Par";
-                else return "Ímpar";
+                bool primo = true;
+                for (int i = 2; i < valor; i++)
+                {
+                    if (valor % 1 == 0) primo = false;
+                }
+                if (primo) return "Par " + valor + " é par";
+                else return "Ímpar " + valor + " é ímpar";
             }         
         }
     }
